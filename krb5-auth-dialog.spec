@@ -1,17 +1,18 @@
 Summary:	Kerberos Network Authentication Dialog for GNOME
 Summary(pl.UTF-8):	Okno dialogowe uwierzytelnienia do sieci Kerberos dla GNOME
 Name:		krb5-auth-dialog
-Version:	3.20.0
-Release:	2
+Version:	3.26.1
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/krb5-auth-dialog/3.20/%{name}-%{version}.tar.xz
-# Source0-md5:	5eac2f521361e45c818aa9d695dd5902
-URL:		http://live.gnome.org/GnomeKeyring
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/krb5-auth-dialog/3.26/%{name}-%{version}.tar.xz
+# Source0-md5:	250275cf645fd4b0865ca06833fd0051
+URL:		https://gitlab.gnome.org/GNOME/krb5-auth-dialog
+BuildRequires:	NetworkManager-devel >= 1.0
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.11.1
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.28
+BuildRequires:	glib2-devel >= 1:2.38.0
 BuildRequires:	gtk+3-devel >= 3.14
 BuildRequires:	heimdal-devel
 BuildRequires:	intltool >= 0.35.0
@@ -53,7 +54,6 @@ odnawia bilet, jeśli jest to możliwe.
 %{__autoheader}
 %{__automake}
 %configure \
-	--disable-network-manager \
 	--disable-silent-rules \
 	--disable-static \
 	--with-pkcs11=%{_libdir}/opensc/opensc-pkcs11.so
