@@ -45,15 +45,15 @@ odnawia bilet, jeśli jest to możliwe.
 %setup -q
 
 %build
-%meson build \
+%meson \
 	-Dpkcs11=%{_libdir}/opensc/opensc-pkcs11.so
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %find_lang %{name} --with-gnome
 # --with-gnome --with-omf
