@@ -20,7 +20,7 @@ BuildRequires:	meson >= 0.53.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pam-devel
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.592
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	yelp-tools
 Requires(post,postun):	glib2 >= 1:2.58
 Requires:	glib2 >= 1:2.58
